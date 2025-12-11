@@ -1,31 +1,88 @@
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            line-height: 1.6;
-            background-color: greenyellow;
-        }
+/* Grundstil – mobil först (small screens) */
+* {
+    box-sizing: border-box;
+}
 
-        iframe {
-            width: 560px;
-            height: 315px;
-            border: none;
-            display: block;
-            margin-bottom: 30px;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 16px;
+    line-height: 1.6;
+    background-color: greenyellow;
+}
 
-        .card {
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 800px;
-        }
+/* Centrera rubrik och ikon */
+h1 {
+    text-align: center;
+    margin-bottom: 16px;
+}
 
-        .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 48;
-            font-size: 120px;
-        }
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48;
+    font-size: 64px;          /* lite mindre på mobil */
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+}
 
+/* Video – responsiv */
+iframe {
+    width: 100%;               /* tar hela bredden på små skärmar */
+    max-width: 800px;          /* men inte mer än 800px på större skärmar */
+    aspect-ratio: 16 / 9;      /* behåll 16:9 utan att sätta fast höjd */
+    height: auto;
+    border: none;
+    display: block;
+    margin: 16px auto 24px;    /* centrera */
+}
+
+/* Kortet med text */
+.card {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;            /* centrera kortet */
+}
+
+/* ---- MEDIA QUERIES ---- */
+
+/* Surfplatta (ca ≥ 600px bred) */
+@media (min-width: 600px) {
+    body {
+        margin: 24px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 96px;
+        margin-bottom: 12px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+/* Desktop (ca ≥ 1024px bred) */
+@media (min-width: 1024px) {
+    body {
+        margin: 40px auto;
+        max-width: 1000px;    /* lås maxbredd så inte allt dras ut för mycket */
+    }
+
+    .material-symbols-outlined {
+        font-size: 120px;
+        margin-bottom: 16px;
+    }
+
+    .card {
+        padding: 24px 28px;
+    }
+
+    iframe {
+        margin-bottom: 32px;
+    }
+}
