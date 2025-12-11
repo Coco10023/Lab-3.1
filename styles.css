@@ -32,7 +32,7 @@ h1 {
 iframe {
     width: 100%;               /* tar hela bredden på små skärmar */
     max-width: 800px;          /* men inte mer än 800px på större skärmar */
-    aspect-ratio: 16 / 9;      /* behåll 16:9 utan att sätta fast höjd */
+    aspect-ratio: 16 / 9;      /* behåller 16:9 utan att sätta fast höjd */
     height: auto;
     border: none;
     display: block;
@@ -48,7 +48,7 @@ iframe {
     margin: 0 auto;            /* centrera kortet */
 }
 
-/* ---- MEDIA QUERIES ---- */
+/* Media queries */
 
 /* Surfplatta (ca ≥ 600px bred) */
 @media (min-width: 600px) {
@@ -70,7 +70,7 @@ iframe {
 @media (min-width: 1024px) {
     body {
         margin: 40px auto;
-        max-width: 1000px;    /* lås maxbredd så inte allt dras ut för mycket */
+        max-width: 1000px;    /* låser maxbredd så inte allt dras ut för mycket */
     }
 
     .material-symbols-outlined {
